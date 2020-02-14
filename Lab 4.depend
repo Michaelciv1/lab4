@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1581710377 source:c:\users\michael-gpc\documents\code blocks work\lab 4\password.cpp
+	"Password.h"
+	<cstring>
+	<iostream>
+	<cctype>
+
+1581709916 c:\users\michael-gpc\documents\code blocks work\lab 4\password.h
+
+1581710558 source:c:\users\michael-gpc\documents\code blocks work\lab 4\main.cpp
+	<iostream>
+	<cstring>
+	"Password.h"
+
