@@ -8,14 +8,14 @@ class Password
         Password();
         virtual ~Password();
         void setPassword(char pass[]);
-        void getPassword();
+        char* getPassword(){return password;}
         bool checkLength(char pass[]);
         bool checkLowerCase(char pass[]);
         bool checkUpperCase(char pass[]);
         bool checkDigit(char pass[]);
         bool checkPunct(char pass[]);
     private:
-        char password[25];
+        char password[21];
 };
 
 #endif // PASSWORD_H

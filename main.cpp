@@ -6,7 +6,6 @@ using namespace std;
 
 int main()
 {
-    char password[20];
     cout << "The Great Password Checker" << endl;
     cout << "--------------------------\n" << endl;
     cout << "Password Requirements:" << endl;
@@ -16,8 +15,11 @@ int main()
     cout << "The password should have at least one punctuation character." << endl;
 
     cout << "Enter your password: ";
-    cin >> password;
-
     Password p;
+
+    if (p.checkLowerCase(p.getPassword()))
+        cout << "passed";
+    else
+        cout << "failed";
 
 }

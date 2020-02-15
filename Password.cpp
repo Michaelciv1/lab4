@@ -7,17 +7,16 @@ using namespace std;
 
 Password::Password()
 {
-    //ctor
+    cin >> password;
 }
 
 Password::~Password()
 {
-    //dtor
+    delete password;
 }
 
 bool Password::checkLength(char pass[]){
     if (strlen(pass) < 6 || strlen(pass) > 20){
-        cout << "Does not meet length requirement." << endl;
         return false;
     }
     else
@@ -30,6 +29,7 @@ bool Password::checkLowerCase(char pass[]){
         if (islower(pass[x]))
             lower = true;
     }
+    return lower;
 }
 
 bool Password::checkUpperCase(char pass[]){
@@ -38,6 +38,7 @@ bool Password::checkUpperCase(char pass[]){
         if (isupper(pass[x]))
             upper = true;
     }
+    return upper;
 }
 
 bool Password::checkDigit(char pass[]){
@@ -46,6 +47,7 @@ bool Password::checkDigit(char pass[]){
         if (isdigit(pass[x]))
             digit = true;
     }
+    return digit;
 }
 
 bool Password::checkPunct(char pass[]){
@@ -54,4 +56,5 @@ bool Password::checkPunct(char pass[]){
         if (ispunct(pass[x]))
             punct = true;
     }
+    return punct;
 }
