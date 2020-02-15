@@ -23,24 +23,6 @@ bool Password::checkLength(char pass[]){
         return true;
 }
 
-bool Password::checkLowerCase(char pass[]){
-    bool lower = false;
-    for (int x = 0; x < 21; x++){
-        if (islower(pass[x]))
-            lower = true;
-    }
-    return lower;
-}
-
-bool Password::checkUpperCase(char pass[]){
-    bool upper = false;
-    for (int x = 0; x < 21; x++){
-        if (isupper(pass[x]))
-            upper = true;
-    }
-    return upper;
-}
-
 bool Password::checkDigit(char pass[]){
     bool digit = false;
     for (int x = 0; x < 21; x++){
@@ -57,4 +39,20 @@ bool Password::checkPunct(char pass[]){
             punct = true;
     }
     return punct;
+}
+
+bool Password::checkLowerCase(char pass[]){
+    for (int x = 0; x < 21; x++){
+        if (islower(pass[x]))
+            return true;
+    }
+    return false;
+}
+
+bool Password::checkUpperCase(char pass[]){
+    for (int x = 0; x < 21; x++){
+        if (isupper(pass[x]))
+            return true;
+    }
+    return false;
 }

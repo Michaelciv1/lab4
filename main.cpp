@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+    int valid = 0;
     cout << "The Great Password Checker" << endl;
     cout << "--------------------------\n" << endl;
     cout << "Password Requirements:" << endl;
@@ -17,9 +18,21 @@ int main()
     cout << "Enter your password: ";
     Password p;
 
-    if (p.checkLowerCase(p.getPassword()))
-        cout << "passed";
-    else
-        cout << "failed";
+    //while (valid = 1){
+        int a, b, c;
+        a = p.checkDigit(p.getPassword());
+        b = p.checkLength(p.getPassword());
+        c = p.checkPunct(p.getPassword());
+
+
+
+        if (a + b + c == 3){
+            cout << "success" << endl;
+            valid = 0;
+        }
+        else {
+            cout << "false" << endl;
+            valid = 0;
+        }
 
 }
