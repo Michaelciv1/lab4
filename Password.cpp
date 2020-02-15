@@ -8,6 +8,7 @@ using namespace std;
 Password::Password()
 {
     cin >> password;
+    cout << endl;
 }
 
 Password::~Password()
@@ -25,7 +26,7 @@ bool Password::checkLength(char pass[]){
 
 bool Password::checkDigit(char pass[]){
     bool digit = false;
-    for (int x = 0; x < 21; x++){
+    for (int x = 0; x < strlen(pass); x++){
         if (isdigit(pass[x]))
             digit = true;
     }
@@ -34,7 +35,7 @@ bool Password::checkDigit(char pass[]){
 
 bool Password::checkPunct(char pass[]){
     bool punct = false;
-    for (int x = 0; x < 21; x++){
+    for (int x = 0; x < strlen(pass); x++){
         if (ispunct(pass[x]))
             punct = true;
     }
@@ -42,7 +43,7 @@ bool Password::checkPunct(char pass[]){
 }
 
 bool Password::checkLowerCase(char pass[]){
-    for (int x = 0; x < 21; x++){
+    for (int x = 0; x < strlen(pass); x++){
         if (islower(pass[x]))
             return true;
     }
@@ -50,7 +51,7 @@ bool Password::checkLowerCase(char pass[]){
 }
 
 bool Password::checkUpperCase(char pass[]){
-    for (int x = 0; x < 21; x++){
+    for (int x = 0; x < strlen(pass); x++){
         if (isupper(pass[x]))
             return true;
     }
