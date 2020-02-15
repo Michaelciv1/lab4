@@ -6,7 +6,7 @@ class Password
     public:
         Password();
         virtual ~Password();
-        char* getPassword(){return password;}
+        char* getPassword(){return password;} //function returns the password to be used in main
         bool checkLength(char pass[]);
         bool checkLowerCase(char pass[]);
         bool checkUpperCase(char pass[]);

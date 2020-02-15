@@ -1,3 +1,15 @@
+/*
+  CIS 22B
+
+    Lab4: This program uses the functions from the class Password to evaluate the validity
+    of the user input password. If the password is invalid, it will print what is missing
+    and continue to ask for a new input till the password is valid.
+  Author: Michael Wallerius
+
+  Date:2/13/2020
+
+*/
+
 #include <iostream>
 #include <cstring>
 #include "Password.h"
@@ -19,7 +31,7 @@ int main()
     while (valid == 0){
         Password p;
 
-        int a, b, c, d, e;
+        int a, b, c, d, e; //stores the int returned by character tests
         a = p.checkDigit(p.getPassword());
         if (a == 0){cout << "Missing a digit character" << endl;}
         b = p.checkLength(p.getPassword());
@@ -42,3 +54,39 @@ int main()
         }
     }
 }
+
+/* OUTPUT
+he Great Password Checker
+--------------------------
+
+Password Requirements:
+The password should be between 6 and 20 characters long.
+The password should contain at least one uppercase and at least one lowercase letter.
+The password should have at least one digit.
+The password should have at least one punctuation character.
+Enter your password: Password123
+
+Missing punctuation character
+Please try again
+
+Enter new password: password!
+
+Missing a digit character
+Missing uppercase character
+Please try again
+
+Enter new password: p
+
+Missing a digit character
+Password was not between 6 and 20 characters
+Missing punctuation character
+Missing uppercase character
+Please try again
+
+Enter new password: Password1!
+
+Valid Password!
+
+Process returned 0 (0x0)   execution time : 22.261 s
+Press any key to continue.
+*/

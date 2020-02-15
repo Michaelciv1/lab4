@@ -16,6 +16,7 @@ Password::~Password()
     delete password;
 }
 
+// This function checks if the length of the input is valid and returns true or false
 bool Password::checkLength(char pass[]){
     if (strlen(pass) < 6 || strlen(pass) > 20){
         return false;
@@ -24,6 +25,7 @@ bool Password::checkLength(char pass[]){
         return true;
 }
 
+// This function checks if there is a digit in the password and returns true or false
 bool Password::checkDigit(char pass[]){
     bool digit = false;
     for (int x = 0; x < strlen(pass); x++){
@@ -33,6 +35,7 @@ bool Password::checkDigit(char pass[]){
     return digit;
 }
 
+//This function checks if there is punctuation in the password and returns true or false
 bool Password::checkPunct(char pass[]){
     bool punct = false;
     for (int x = 0; x < strlen(pass); x++){
@@ -42,6 +45,7 @@ bool Password::checkPunct(char pass[]){
     return punct;
 }
 
+// This function checks if there is a lowercase character in the password and returns true or false
 bool Password::checkLowerCase(char pass[]){
     for (int x = 0; x < strlen(pass); x++){
         if (islower(pass[x]))
@@ -50,6 +54,7 @@ bool Password::checkLowerCase(char pass[]){
     return false;
 }
 
+// This function checks if there is an uppercase character in the password and returns true or false
 bool Password::checkUpperCase(char pass[]){
     for (int x = 0; x < strlen(pass); x++){
         if (isupper(pass[x]))
