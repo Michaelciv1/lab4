@@ -7,8 +7,7 @@ using namespace std;
 
 Password::Password()
 {
-    Password *password = new Password[21];
-    cout << endl;
+    char *password = new char[21];
 }
 
 Password::~Password()
@@ -18,7 +17,7 @@ Password::~Password()
 
 // This function sets the password variable to whatever the user inputs.
 void Password::setPassword(){
-    cout << "hi there";
+
     cin >> password;
 }
 
