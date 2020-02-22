@@ -7,7 +7,7 @@ using namespace std;
 
 Password::Password()
 {
-    cin >> password;
+    Password *password = new Password[21];
     cout << endl;
 }
 
