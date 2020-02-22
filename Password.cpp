@@ -16,6 +16,7 @@ Password::~Password()
     delete password;
 }
 
+// This function sets the password variable to whatever the user inputs.
 void Password::setPassword(){
     cout << "hi there";
     cin >> password;
