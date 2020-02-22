@@ -30,6 +30,7 @@ int main()
 
     while (valid == 0){
         Password p;
+        p.setPassword();
 
         int a, b, c, d, e; //stores the int returned by character tests
         a = p.checkDigit(p.getPassword());

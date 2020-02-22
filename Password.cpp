@@ -16,6 +16,11 @@ Password::~Password()
     delete password;
 }
 
+void Password::setPassword(){
+    cout << "hi there";
+    cin >> password;
+}
+
 // This function checks if the length of the input is valid and returns true or false
 bool Password::checkLength(char pass[]){
     if (strlen(pass) < 6 || strlen(pass) > 20){
