@@ -16,6 +16,7 @@
 
 using namespace std;
 
+// The main runs all the appropriate checks for the password and loops the program if invalid password.
 int main()
 {
     int valid = 0;
