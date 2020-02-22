@@ -34,15 +34,15 @@ int main()
         p.setPassword();
 
         int a, b, c, d, e; //stores the 1 or 0 returned by character tests
-        a = p.checkDigit(p.getPassword());
+        a = p.checkDigit();
         if (a == 0){cout << "Missing a digit character" << endl;}
-        b = p.checkLength(p.getPassword());
+        b = p.checkLength();
         if (b == 0){cout << "Password was not between 6 and 20 characters" << endl;}
-        c = p.checkPunct(p.getPassword());
+        c = p.checkPunct();
         if (c == 0){cout << "Missing punctuation character" << endl;}
-        d = p.checkLowerCase(p.getPassword());
+        d = p.checkLowerCase();
         if (d == 0){cout << "Missing lowercase character" << endl;}
-        e = p.checkUpperCase(p.getPassword());
+        e = p.checkUpperCase();
         if (e == 0){cout << "Missing uppercase character" << endl;}
 
         if (a + b + c + d + e == 5){ //if all five ints returned by the tests add to five, the password is valid

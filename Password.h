@@ -19,12 +19,11 @@ class Password
         Password();
         virtual ~Password();
         void setPassword();
-        char* getPassword(){return password;} //function returns the password to be used in main
-        bool checkLength(char pass[]);
-        bool checkLowerCase(char pass[]);
-        bool checkUpperCase(char pass[]);
-        bool checkDigit(char pass[]);
-        bool checkPunct(char pass[]);
+        bool checkLength();
+        bool checkLowerCase();
+        bool checkUpperCase();
+        bool checkDigit();
+        bool checkPunct();
     private:
         char *password;
 };
