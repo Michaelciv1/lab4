@@ -32,7 +32,7 @@ int main()
         Password p;
         p.setPassword();
 
-        int a, b, c, d, e; //stores the int returned by character tests
+        int a, b, c, d, e; //stores the 1 or 0 returned by character tests
         a = p.checkDigit(p.getPassword());
         if (a == 0){cout << "Missing a digit character" << endl;}
         b = p.checkLength(p.getPassword());
@@ -44,7 +44,7 @@ int main()
         e = p.checkUpperCase(p.getPassword());
         if (e == 0){cout << "Missing uppercase character" << endl;}
 
-        if (a + b + c + d + e == 5){
+        if (a + b + c + d + e == 5){ //if all five ints returned by the tests add to five, the password is valid
             cout << "Valid Password!" << endl;
             valid = 1;
         }
@@ -57,7 +57,7 @@ int main()
 }
 
 /* OUTPUT
-he Great Password Checker
+The Great Password Checker
 --------------------------
 
 Password Requirements:

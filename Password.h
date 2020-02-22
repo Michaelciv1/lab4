@@ -1,3 +1,15 @@
+/*
+  CIS 22B
+
+    Lab4: This program uses the functions from the class Password to evaluate the validity
+    of the user input password. If the password is invalid, it will print what is missing
+    and continue to ask for a new input till the password is valid.
+  Author: Michael Wallerius
+
+  Date:2/13/2020
+
+*/
+
 #ifndef PASSWORD_H
 #define PASSWORD_H
 
@@ -14,7 +26,7 @@ class Password
         bool checkDigit(char pass[]);
         bool checkPunct(char pass[]);
     private:
-        char password[21];
+        char *password;
 };
 
 #endif // PASSWORD_H

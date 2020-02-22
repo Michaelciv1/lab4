@@ -1,3 +1,15 @@
+/*
+  CIS 22B
+
+    Lab4: This program uses the functions from the class Password to evaluate the validity
+    of the user input password. If the password is invalid, it will print what is missing
+    and continue to ask for a new input till the password is valid.
+  Author: Michael Wallerius
+
+  Date:2/13/2020
+
+*/
+
 #include "Password.h"
 #include <cstring>
 #include <iostream>
@@ -5,9 +17,11 @@
 
 using namespace std;
 
+const int SIZE = 21;
+
 Password::Password()
 {
-    char *password = new char[21];
+    char *password = new char[SIZE];
 }
 
 Password::~Password()
@@ -15,7 +29,7 @@ Password::~Password()
     delete password;
 }
 
-// This function sets the password variable to whatever the user inputs.
+// This function sets the password char array to what the user inputs
 void Password::setPassword(){
 
     cin >> password;
